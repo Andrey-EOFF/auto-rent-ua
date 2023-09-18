@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import CardCar from "../CardCar/CardCar";
+import getAllCars from "../../api/api";
 
 export default function CatalogCars() {
+  const [cars, setCars] = useState([]);
+
+  useEffect(() => {
+    getAllCars()
+      .then((data) => {
+        setCars(data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }, []);
+
   return (
-    <>
-      <h1>Catalog Cars</h1>
-    </>
+    <div>
+      <ul className="car-list">
+        {cars.map((car) => (
+          <li key={car.id}>
+            <CardCar car={car} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
