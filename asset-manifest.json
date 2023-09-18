@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/auto-rent-ua/static/css/main.45e5add1.css",
+    "main.js": "/auto-rent-ua/static/js/main.6170949c.js",
+    "static/js/787.dc462805.chunk.js": "/auto-rent-ua/static/js/787.dc462805.chunk.js",
+    "index.html": "/auto-rent-ua/index.html",
+    "main.45e5add1.css.map": "/auto-rent-ua/static/css/main.45e5add1.css.map",
+    "main.6170949c.js.map": "/auto-rent-ua/static/js/main.6170949c.js.map",
+    "787.dc462805.chunk.js.map": "/auto-rent-ua/static/js/787.dc462805.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45e5add1.css",
+    "static/js/main.6170949c.js"
+  ]
+}
