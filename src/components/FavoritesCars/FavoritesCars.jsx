@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardCar from "../CardCar/CardCar";
+import { CarItem, CarList, CardContainer } from "./FavoritesCars.styled";
 
 export default function FavoritesCars() {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -7,7 +8,7 @@ export default function FavoritesCars() {
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavoriteCars(favorites);
-  }, [favoriteCars]);
+  }, []);
 
   const removeFromFavorites = (car) => {
     const updatedFavorites = favoriteCars.filter(
@@ -18,19 +19,18 @@ export default function FavoritesCars() {
   };
 
   return (
-    <>
-      <h1>Favorites Cars</h1>
+    <CardContainer>
       {favoriteCars.length > 0 ? (
-        <ul className="car-list">
+        <CarList className="car-list">
           {favoriteCars.map((car) => (
-            <li key={car.id}>
+            <CarItem key={car.id}>
               <CardCar car={car} onRemoveFromFavorites={removeFromFavorites} />
-            </li>
+            </CarItem>
           ))}
-        </ul>
+        </CarList>
       ) : (
         <p>Ви ще не обрали свої улюблені авто!</p>
       )}
-    </>
+    </CardContainer>
   );
 }

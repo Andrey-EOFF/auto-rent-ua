@@ -1,9 +1,10 @@
 import React from "react";
+import { BtnLoadMoreStyle } from "./BtnLoadMore.styled";
 
 export default function BtnLoadMore({ onLoadMore }) {
   return (
-    <button type="button" onClick={onLoadMore}>
+    <BtnLoadMoreStyle type="button" onClick={onLoadMore}>
       Load More
-    </button>
+    </BtnLoadMoreStyle>
   );
 }

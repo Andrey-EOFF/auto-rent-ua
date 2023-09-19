@@ -1,20 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { SideBarNav, SidebarLink } from "./SideBar.styled";
 
 export default function SideBar() {
   return (
-    <nav>
+    <SideBarNav>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <SidebarLink to="/">
+            Home
+          </SidebarLink>
         </li>
         <li>
-          <NavLink to="/catalog">Catalog</NavLink>
+          <SidebarLink to="/catalog">Catalog</SidebarLink>
         </li>
         <li>
-          <NavLink to="/favorites">Favorites</NavLink>
+          <SidebarLink to="/favorites">Favorites</SidebarLink>
         </li>
       </ul>
-    </nav>
+    </SideBarNav>
   );
 }

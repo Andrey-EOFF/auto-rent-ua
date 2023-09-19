@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CardCar from "../CardCar/CardCar";
 import getAllCars from "../../api/api";
 import BtnLoadMore from "../Buttons/BtnLoadMore/BtnLoadMore";
+import { CarItem, CarList, CardContainer } from "./CatalogCars.styled";
 
 export default function CatalogCars() {
   const [cars, setCars] = useState([]);
@@ -32,15 +33,17 @@ export default function CatalogCars() {
   };
 
   return (
-    <div>
-      <ul className="car-list">
-        {cars.map((car) => (
-          <li key={car.id}>
-            <CardCar car={car} />
-          </li>
-        ))}
-      </ul>
-      <BtnLoadMore onLoadMore={handleLoadMore} />
-    </div>
+    <>
+      <CardContainer>
+        <CarList>
+          {cars.map((car) => (
+            <CarItem key={car.id}>
+              <CardCar car={car} />
+            </CarItem>
+          ))}
+        </CarList>
+        <BtnLoadMore onLoadMore={handleLoadMore} />
+      </CardContainer>
+    </>
   );
 }
