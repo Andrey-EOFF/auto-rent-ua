@@ -1,14 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { BiHeart } from "react-icons/bi";
 
 export default function CardCar({ car }) {
   const [imageError, setImageError] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  useEffect(() => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const isAlreadyAdded = favorites.some((favorite) => favorite.id === car.id);
+    setIsFavorite(isAlreadyAdded);
+  }, [car.id]);
 
   const handleImageError = () => {
     setImageError(true);
   };
 
+  const addToFavorites = (car) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const isAlreadyAdded = favorites.some((favorite) => favorite.id === car.id);
+
+    if (!isAlreadyAdded) {
+      const updatedFavorites = [...favorites, car];
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      setIsFavorite(true);
+    }
+  };
+
+  const removeFromFavorites = (car) => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const updatedFavorites = favorites.filter(
+      (favorite) => favorite.id !== car.id
+    );
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    setIsFavorite(false);
+  };
+
   return (
     <div className="car-card">
+      <button
+        type="button"
+        onClick={() => {
+          if (isFavorite) {
+            removeFromFavorites(car);
+          } else {
+            addToFavorites(car);
+          }
+        }}
+      >
+        <BiHeart />
+      </button>
       {!imageError ? (
         <img
           src={car.img}
@@ -28,7 +71,6 @@ export default function CardCar({ car }) {
         <h2>
           {car.make} {car.model}
         </h2>
-        {/* Решта властивостей і умови залишаються незмінними */}
         {car.year && <p>Year: {car.year}</p>}
         {car.rentalPrice && <p>Rental Price: {car.rentalPrice}</p>}
         {car.address && (
