@@ -11,16 +11,13 @@ export default function App() {
     <>
       <SideBar />
       <Routes>
-        {/* Роут для сторінки "Home" */}
         <Route exact path="/" element={<HomePage />} />
 
-        {/* Роути для інших сторінок */}
         <Route path="/" element={<SharedLayout />}>
           <Route path="catalog" element={<CatalogPage />} />
           <Route path="favorites" element={<FavoritesPage />} />
         </Route>
 
-        {/* Роут, якщо жоден із попередніх роутів не відповідає */}
         <Route path="*" element={<HomePage />} />
       </Routes>
     </>
