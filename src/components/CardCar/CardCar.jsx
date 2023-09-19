@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BiHeart } from "react-icons/bi";
+import { BiHeart, BiSolidHeart } from "react-icons/bi";
 import {
   CarDetails,
   CarImage,
@@ -81,7 +81,11 @@ export default function CardCar({ car }) {
             }
           }}
         >
-          <BiHeart />
+          {isFavorite ? (
+            <BiSolidHeart className="favorite-heart" />
+          ) : (
+            <BiHeart />
+          )}
         </FavoriteButton>
         <CarDetails>
           <CardHeader>

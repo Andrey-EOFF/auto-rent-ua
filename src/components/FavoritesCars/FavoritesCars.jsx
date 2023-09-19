@@ -24,7 +24,11 @@ export default function FavoritesCars() {
         <CarList className="car-list">
           {favoriteCars.map((car) => (
             <CarItem key={car.id}>
-              <CardCar car={car} onRemoveFromFavorites={removeFromFavorites} />
+              <CardCar
+                key={car.id}
+                car={car}
+                onRemoveFromFavorites={() => removeFromFavorites(car)}
+              />
             </CarItem>
           ))}
         </CarList>
