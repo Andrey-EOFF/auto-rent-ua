@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { colors } from "../../vars"; 
 
 export const SideBarNav = styled.nav`
   display: flex;
@@ -21,9 +22,10 @@ export const SideBarNav = styled.nav`
 
   a {
     text-decoration: none;
-    color: #333;
+    color: ${colors.textColor};
     font-size: 24px;
   }
+
 
   
 `;
@@ -32,6 +34,12 @@ export const SidebarLink = styled(NavLink)`
   text-decoration: none;
   color: #333;
   font-size: 18px;
+
+  &:hover{
+    color: ${colors.primaryHover};
+    transition: color 0.3s ease-in-out;
+  }
+
 
   &.active {
     font-weight: bold;

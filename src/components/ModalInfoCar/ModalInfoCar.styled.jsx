@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors, fonts } from "../../vars";
 
 export const ModalContainer = styled.div`
   border-radius: 24px;
@@ -12,6 +13,7 @@ export const CarImg = styled.img`
   object-fit: cover;
   border-radius: 14px;
 `;
+
 export const CardHeader = styled.div`
   display: flex;
   justify-content: space-between;
@@ -23,7 +25,7 @@ export const CardHeader = styled.div`
 `;
 
 export const CardModal = styled.span`
-  color: #3470ff;
+  color: ${colors.primaryColor};
 `;
 
 export const CarInfo = styled.div`
@@ -56,7 +58,7 @@ export const CarTitleFunctional = styled.p`
   text-align: start;
   font-size: 14px;
   line-height: 1, 25;
-  color: #121417;
+  color: ${colors.textColor};
 
   margin-bottom: 8px;
 `;
@@ -73,7 +75,7 @@ export const CarConditionsItem = styled.li`
   display: flex;
   text-align: center;
   justify-content: center;
-  background-color: #f9f9f9;
+  background-color: ${colors.backgroundColor};
   border-radius: 35px;
   font-size: 12px;
   margin-right: 8px;
@@ -82,10 +84,10 @@ export const CarConditionsItem = styled.li`
 `;
 
 export const CardItemSpan = styled.span`
-  color: #3470ff;
+  color: ${colors.primaryColor};
   margin-left: 4px;
 
-  font-family: "Montserrat";
+  font-family: ${fonts.fontFamily};
   font-weight: bold;
 `;
 
@@ -101,12 +103,11 @@ export const CloseButton = styled.button`
   background: none;
   border: none;
   font-size: 24px;
-  color: #121417;
+  color: ${colors.textColor};
 
   cursor: pointer;
   &:hover {
-    color: #0b44cd;
+    color: ${colors.primaryColor};
     transition: color 0.3s ease-in-out;
   }
 `;
-

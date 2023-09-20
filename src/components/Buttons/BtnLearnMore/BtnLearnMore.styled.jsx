@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { colors } from "../../../vars";
 
 export const BtnStyle = styled.button`
   width: 274px;
@@ -9,12 +9,12 @@ export const BtnStyle = styled.button`
   border-radius: 12px;
   font-size: 14px;
   line-height: 1.4;
-  color:#FFFFFF;
-  background-color: #3470FF;
+  color:#FFFF;
+  background-color:${colors.primaryColor};
 
   cursor: pointer;
   &:hover {
-    background-color: #0B44CD;
+    background-color:${colors.primaryHover};
     transition: background-color 0.3s ease-in-out;
  
   }

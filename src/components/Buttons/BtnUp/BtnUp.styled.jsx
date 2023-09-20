@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { colors } from "../../../vars"; 
 
 export const StyledButtonUp = styled.div`
   position: fixed;
-  background-color:#3470FF;
-  right: 50%;
+  background-color:${colors.primaryColor};
+  right: 100px;
   bottom: 0;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
