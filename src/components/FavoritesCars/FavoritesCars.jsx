@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardCar from "../CardCar/CardCar";
-import { CarItem, CarList, CardContainer } from "./FavoritesCars.styled";
+import { CarItem, CarList, CardContainer, StyledNavLink, TextTime } from "./FavoritesCars.styled";
 import BtnUp from "../Buttons/BtnUp/BtnUp";
 import Loader from "../Loader/Loader";
 
@@ -49,7 +49,10 @@ export default function FavoritesCars() {
               ))}
             </CarList>
           ) : (
-            <p>Ви ще не обрали свої улюблені авто!</p>
+            <TextTime>
+        Час обрати своє авто
+        <StyledNavLink to="/catalog">Catalog</StyledNavLink>
+      </TextTime>
           )}
           <BtnUp />
         </>
