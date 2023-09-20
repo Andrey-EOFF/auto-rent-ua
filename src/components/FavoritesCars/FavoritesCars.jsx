@@ -3,6 +3,7 @@ import CardCar from "../CardCar/CardCar";
 import { CarItem, CarList, CardContainer, StyledNavLink, TextTime } from "./FavoritesCars.styled";
 import BtnUp from "../Buttons/BtnUp/BtnUp";
 import Loader from "../Loader/Loader";
+import { useFavorites } from "../../services/favoritesService";
 
 export default function FavoritesCars() {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -20,15 +21,7 @@ export default function FavoritesCars() {
     };
 
     loadFavorites();
-  }, []);
-
-  const removeFromFavorites = (car) => {
-    const updatedFavorites = favoriteCars.filter(
-      (favorite) => favorite.id !== car.id
-    );
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    setFavoriteCars(updatedFavorites);
-  };
+  }, [isLoading]);
 
   return (
     <CardContainer>
@@ -43,7 +36,7 @@ export default function FavoritesCars() {
                   <CardCar
                     key={car.id}
                     car={car}
-                    onRemoveFromFavorites={() => removeFromFavorites(car)}
+                    onRemoveFromFavorites={() => useFavorites.removeFromFavorites(car)}
                   />
                 </CarItem>
               ))}
