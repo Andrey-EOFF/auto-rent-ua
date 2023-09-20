@@ -1,4 +1,3 @@
-// cardCar.js
 import React, { useState } from "react";
 import { BiHeart, BiSolidHeart } from "react-icons/bi";
 import {
