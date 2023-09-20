@@ -17,10 +17,10 @@ ul {
   list-style: none;
 }
 
-img {
+/* img {
   display: block;
   margin: 0;
-}
+} */
 
 .favorite-heart {
   color: #3470FF;

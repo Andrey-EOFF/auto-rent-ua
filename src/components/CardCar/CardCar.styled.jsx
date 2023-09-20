@@ -16,6 +16,10 @@ export const CardHeader = styled.div`
   align-items: center;
   margin-top: 14px;
   margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 1.12;
+
 `;
 
 export const CardModal = styled.span`
@@ -43,6 +47,7 @@ export const CarImage = styled.img`
   width: 274px;
   min-height: 268px;
   border-radius: 14px;
+  object-fit: cover;
 `;
 
 export const CarDetails = styled.div`
@@ -58,7 +63,7 @@ export const CarInfo = styled.div`
   flex-wrap: wrap;
   span {
     color: rgba(0, 0, 0, 0.5);
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.12;
   }
   span:not(:last-child)::after {
