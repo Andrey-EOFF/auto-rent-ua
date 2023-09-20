@@ -10,7 +10,7 @@ export default function FavoritesCars() {
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavoriteCars(favorites);
-  }, [favoriteCars]);
+  }, []);
 
   const removeFromFavorites = (car) => {
     const updatedFavorites = favoriteCars.filter(
