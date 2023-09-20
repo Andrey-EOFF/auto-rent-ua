@@ -6,6 +6,7 @@ export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
 `;
 
 export const CarList = styled.ul`
@@ -16,6 +17,7 @@ export const CarList = styled.ul`
   list-style: none;
   padding: 0;
   margin-bottom: 100px;
+  position: relative;
 `;
 
 export const CarItem = styled.li`

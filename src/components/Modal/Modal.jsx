@@ -1,8 +1,6 @@
-
 import { useEffect } from "react";
+import ReactDOM from "react-dom";
 import { ModalBackdrop, ModalContent } from "./Modal.styled";
-
-const modalRoot = document.querySelector("#modal-root");
 
 export default function Modal ({ children, toggleModal }) {
   const handleBackdropClick = (e) => {
@@ -25,11 +23,12 @@ export default function Modal ({ children, toggleModal }) {
     };
   }, [toggleModal]);
 
-  return (
+  return ReactDOM.createPortal(
     <ModalBackdrop onClick={handleBackdropClick}>
       <ModalContent>
         <div>{children}</div>
       </ModalContent>
-    </ModalBackdrop>
+    </ModalBackdrop>,
+    document.getElementById("modal-root")
   );
 }

@@ -2,7 +2,14 @@ import React, { useEffect, useState } from "react";
 import CardCar from "../CardCar/CardCar";
 import getAllCars from "../../api/api";
 import BtnLoadMore from "../Buttons/BtnLoadMore/BtnLoadMore";
-import { CarItem, CarList, CardContainer, NoMoreCarsText } from "./CatalogCars.styled";
+import {
+  CarItem,
+  CarList,
+  CardContainer,
+  NoMoreCarsText,
+} from "./CatalogCars.styled";
+import BtnUp from "../Buttons/BtnUp/BtnUp";
+
 
 export default function CatalogCars() {
   const [cars, setCars] = useState([]);
@@ -19,8 +26,7 @@ export default function CatalogCars() {
         if (responseData.length > 0) {
           setCars((prevCars) => [...prevCars, ...responseData]);
         } else {
-          
-          setNoMoreCars(true); 
+          setNoMoreCars(true);
         }
       } catch (error) {
         console.error("Error:", error);
@@ -49,7 +55,9 @@ export default function CatalogCars() {
         ) : (
           <NoMoreCarsText>Ви передивились всі авто!</NoMoreCarsText>
         )}
+         <BtnUp/>
       </CardContainer>
+     
     </>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardCar from "../CardCar/CardCar";
 import { CarItem, CarList, CardContainer } from "./FavoritesCars.styled";
+import BtnUp from "../Buttons/BtnUp/BtnUp";
 
 export default function FavoritesCars() {
   const [favoriteCars, setFavoriteCars] = useState([]);
@@ -35,6 +36,7 @@ export default function FavoritesCars() {
       ) : (
         <p>Ви ще не обрали свої улюблені авто!</p>
       )}
+      <BtnUp />
     </CardContainer>
   );
 }
