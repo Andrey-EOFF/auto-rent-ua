@@ -8,14 +8,14 @@ import {
   CardHeader,
   CardModal,
   FavoriteButton,
-  PlaceholderImage,
 } from "./CardCar.styled";
 import BtnLearnMore from "../Buttons/BtnLearnMore/BtnLearnMore";
 import Modal from "../Modal/Modal";
 import ModalInfoCar from "../ModalInfoCar/ModalInfoCar";
+import imageTest from "../../images/car1.jpg";
 
 export default function CardCar({ car }) {
-  const [imageError, setImageError] = useState(false);
+
   const [isFavorite, setIsFavorite] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,8 +26,10 @@ export default function CardCar({ car }) {
     setIsFavorite(isAlreadyAdded);
   }, [car.id]);
 
-  const handleImageError = () => {
-    setImageError(true);
+  const handleImageError = (e) => {
+    if (e.target && e.target.src) {
+      e.target.src = imageTest;
+    }
   };
 
   const addToFavorites = (car) => {
@@ -59,18 +61,11 @@ export default function CardCar({ car }) {
   return (
     <CardContainer>
       <div>
-        {!imageError ? (
-          <CarImage
-            src={car.img}
-            alt={`${car.make} ${car.model}`}
-            onError={handleImageError}
-          />
-        ) : (
-          <PlaceholderImage
-            src="https://funart.top/uploads/posts/2019-10/thumbs/1570459049_mashiny-buduschego-3.jpg"
-            alt={`${car.make} ${car.model}`}
-          />
-        )}
+        <CarImage
+          src={car.img}
+          alt={`${car.make} ${car.model}`}
+          onError={handleImageError}
+        />
         <FavoriteButton
           type="button"
           onClick={() => {

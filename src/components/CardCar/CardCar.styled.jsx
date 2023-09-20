@@ -27,16 +27,15 @@ export const FavoriteButton = styled.button`
   font-size: 18px;
   border: none;
   position: absolute;
-  top: 14px; 
-  right: 14px; 
-  color: #FFFFFF; 
+  top: 14px;
+  right: 14px;
+  color: #ffffff;
 
   cursor: pointer;
 
   &:hover {
-    color: #0B44CD;
+    color: #0b44cd;
     transition: color 0.3s ease-in-out;
- 
   }
 `;
 
@@ -46,20 +45,15 @@ export const CarImage = styled.img`
   border-radius: 14px;
 `;
 
-export const PlaceholderImage = styled.img`
-  width: 274px;
-  height: 268px;
-`;
-
 export const CarDetails = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 export const CarInfo = styled.div`
-width: 270px;
-height: 40px;
+  width: 270px;
+  height: 40px;
   display: flex;
   flex-wrap: wrap;
   span {

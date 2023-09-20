@@ -4,7 +4,7 @@ export default function FilterCars() {
     
     return (
         <>
-        <h1>Тут буде фільтр для вибору автівки</h1>
+       
         </>
     )
 }
