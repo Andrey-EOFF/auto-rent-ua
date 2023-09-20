@@ -7,7 +7,7 @@ export const BtnStyle = styled.button`
 
   border: none;
   border-radius: 12px;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.4;
   color:#FFFFFF;
   background-color: #3470FF;

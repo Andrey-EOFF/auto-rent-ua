@@ -46,8 +46,10 @@ export default function Home() {
         </TextContainer>
       </ImageContainer>
 
-      <TextTime>Час обрати своє Авто</TextTime>
-      <StyledNavLink to="/catalog">Catalog</StyledNavLink>
+      <TextTime>
+        Час обрати своє авто
+        <StyledNavLink to="/catalog">Catalog</StyledNavLink>
+      </TextTime>
     </Container>
   );
 }

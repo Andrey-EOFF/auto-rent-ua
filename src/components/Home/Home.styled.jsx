@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1184px;
   margin: 0 auto;
-  padding: 20px;
 `;
 
 export const Header = styled.h1`
@@ -18,6 +17,7 @@ export const ImageContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 20px 0;
+  background: linear-gradient(to right, #e5e5e5, #ffffff);
 `;
 
 export const Image = styled.img`
@@ -43,17 +43,22 @@ export const Text = styled.p`
   line-height: 1.5;
 `;
 
-export const TextTime = styled.h3`
-    text-align: center;
-    font-size: 24px;
-    margin-top: 4%;
-`
+export const TextTime = styled.div`
+  display: flex;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 4%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+`;
 
 export const StyledNavLink = styled(NavLink)`
   display: block;
   text-align: center;
   font-size: 24px;
-  margin-top: 20px;
+  margin-left: 10px;
+
   text-decoration: none;
   color: #007bff;
 
@@ -61,4 +66,3 @@ export const StyledNavLink = styled(NavLink)`
     text-decoration: underline;
   }
 `;
-

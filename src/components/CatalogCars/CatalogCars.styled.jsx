@@ -21,3 +21,10 @@ export const CarList = styled.ul`
 export const CarItem = styled.li`
   box-sizing: border-box;
 `;
+
+
+
+export const NoMoreCarsText = styled.p`
+  text-align: center;
+  font-size: 24px;
+`;

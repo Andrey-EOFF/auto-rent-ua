@@ -100,7 +100,13 @@ export const CloseButton = styled.button`
   right: 16px;
   background: none;
   border: none;
-  cursor: pointer;
   font-size: 24px;
-  color: #333;
+  color: #121417;
+
+  cursor: pointer;
+  &:hover {
+    color: #0b44cd;
+    transition: color 0.3s ease-in-out;
+  }
 `;
+

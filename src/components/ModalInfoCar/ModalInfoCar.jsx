@@ -1,5 +1,6 @@
 // ModuleInfoCar.jsx
 import React from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import {
   ModalContent,
   CloseButton,
@@ -14,6 +15,7 @@ import {
   CarConditionsItem,
   CardItemSpan,
 } from "./ModalInfoCar.styled";
+import BtnRentalCar from "../Buttons/BtnRentalCar/BtnRentalCar";
 
 export default function ModalInfoCar({ car, toggleModal }) {
   return (
@@ -81,8 +83,11 @@ export default function ModalInfoCar({ car, toggleModal }) {
             </CarConditionsItem>
           </CarConditions>
 
-          <CloseButton onClick={toggleModal}>x</CloseButton>
+          <CloseButton onClick={toggleModal}>
+            <AiOutlineClose />
+          </CloseButton>
         </ModalContent>
+        <BtnRentalCar />
       </ModalContainer>
     </>
   );

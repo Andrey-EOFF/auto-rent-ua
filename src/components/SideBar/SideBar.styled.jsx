@@ -25,9 +25,7 @@ export const SideBarNav = styled.nav`
     font-size: 24px;
   }
 
-  a.active {
-    font-weight: bold;
-  }
+  
 `;
 
 export const SidebarLink = styled(NavLink)`
