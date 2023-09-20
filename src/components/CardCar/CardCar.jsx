@@ -51,7 +51,7 @@ const CardCar = ({ car }) => {
           {isFavorite ? (
             <BiSolidHeart className="favorite-heart" />
           ) : (
-            <BiHeart />
+            <BiHeart className="heart"/>
           )}
         </FavoriteButton>
         <CarDetails>

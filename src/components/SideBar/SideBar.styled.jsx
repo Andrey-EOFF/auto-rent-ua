@@ -4,7 +4,7 @@ import { colors } from "../../vars";
 
 export const SideBarNav = styled.nav`
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -13,6 +13,7 @@ export const SideBarNav = styled.nav`
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
     justify-content: space-evenly;
     background-color: rgba(0, 0, 0, 0.1);
     height: 60px;
@@ -31,6 +32,7 @@ export const SideBarNav = styled.nav`
 `;
 
 export const SidebarLink = styled(NavLink)`
+margin: 0;
   text-decoration: none;
   color: #333;
   font-size: 18px;

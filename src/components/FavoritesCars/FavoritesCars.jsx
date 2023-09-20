@@ -6,10 +6,11 @@ import BtnUp from "../Buttons/BtnUp/BtnUp";
 export default function FavoritesCars() {
   const [favoriteCars, setFavoriteCars] = useState([]);
 
+
   useEffect(() => {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavoriteCars(favorites);
-  }, []);
+  }, [favoriteCars]);
 
   const removeFromFavorites = (car) => {
     const updatedFavorites = favoriteCars.filter(

@@ -17,6 +17,7 @@ export const CarList = styled.ul`
 
   list-style: none;
   padding: 0;
+  margin: 0;
   margin-bottom: 100px;
   position: relative;
 `;
