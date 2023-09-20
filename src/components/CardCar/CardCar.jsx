@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// cardCar.js
+import React, { useState } from "react";
 import { BiHeart, BiSolidHeart } from "react-icons/bi";
 import {
   CarDetails,
@@ -13,45 +14,16 @@ import BtnLearnMore from "../Buttons/BtnLearnMore/BtnLearnMore";
 import Modal from "../Modal/Modal";
 import ModalInfoCar from "../ModalInfoCar/ModalInfoCar";
 import imageTest from "../../images/car1.jpg";
+import { useFavorites } from "../../services/favoritesService"; 
 
-export default function CardCar({ car }) {
-
-  const [isFavorite, setIsFavorite] = useState(false);
+const CardCar = ({ car }) => {
+  const { isFavorite, addToFavorites, removeFromFavorites } = useFavorites(car);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    const isAlreadyAdded = favorites.some((favorite) => favorite.id === car.id);
-    setIsFavorite(isAlreadyAdded);
-  }, [car.id]);
 
   const handleImageError = (e) => {
     if (e.target && e.target.src) {
       e.target.src = imageTest;
     }
-  };
-
-  const addToFavorites = (car) => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    const isAlreadyAdded = favorites.some((favorite) => favorite.id === car.id);
-
-    if (!isAlreadyAdded) {
-      const updatedFavorites = [...favorites, car];
-      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-      setIsFavorite(true);
-    }
-  };
-
-  const removeFromFavorites = (car) => {
-    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-
-    const updatedFavorites = favorites.filter(
-      (favorite) => favorite.id !== car.id
-    );
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    setIsFavorite(false);
   };
 
   const toggleModal = () => {
@@ -70,9 +42,9 @@ export default function CardCar({ car }) {
           type="button"
           onClick={() => {
             if (isFavorite) {
-              removeFromFavorites(car);
+              removeFromFavorites();
             } else {
-              addToFavorites(car);
+              addToFavorites();
             }
           }}
         >
@@ -109,4 +81,6 @@ export default function CardCar({ car }) {
       )}
     </CardContainer>
   );
-}
+};
+
+export default CardCar;

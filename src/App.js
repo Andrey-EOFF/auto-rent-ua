@@ -4,7 +4,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 import SideBar from "./components/SideBar/SideBar";
-import SharedLayout from "./SharedLayout/SharedLayout";
+import SharedLayout from "./components/SharedLayout/SharedLayout";
+
 
 export default function App() {
   return (
