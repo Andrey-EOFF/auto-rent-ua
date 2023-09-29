@@ -78,7 +78,7 @@ export default function ModalInfoCar({ car, toggleModal }) {
               </CardItemSpan>
             </CarConditionsItem>
             <CarConditionsItem>
-              Price: <CardItemSpan>{car.rentalPrice}</CardItemSpan>
+              Price: <CardItemSpan>${car.rentalPrice}</CardItemSpan>
             </CarConditionsItem>
           </CarConditions>
 

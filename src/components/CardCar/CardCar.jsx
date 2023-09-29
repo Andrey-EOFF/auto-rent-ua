@@ -59,7 +59,7 @@ const CardCar = ({ car }) => {
               {car.make} <CardModal>{car.model}</CardModal>
               {","} {car.year}
             </div>
-            <span>{car.rentalPrice}</span>
+            <span>${car.rentalPrice}</span>
           </CardHeader>
 
           <CarInfo>
