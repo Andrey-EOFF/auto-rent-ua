@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Button, FilterBlock, FilterBlockMil, FilterContainer, Input, Select } from "./FilterCars.styled";
+import {
+  Button,
+  FilterBlock,
+  FilterBlockMil,
+  FilterContainer,
+  Input,
+  InputMil,
+  Label,
+  Select,
+} from "./FilterCars.styled";
 
 const makes = [
   "Buick",
@@ -60,13 +69,15 @@ export default function FilterCars({ onFilter }) {
   return (
     <FilterContainer>
       <FilterBlock>
-        <label htmlFor="make">Car brand</label>
+        <Label htmlFor="make">Car brand</Label>
         <Select
           id="make"
           onChange={(e) => setSelectedMake(e.target.value)}
           value={selectedMake}
         >
-          <option value="">Enter the text:</option>
+          <option value="" disabled hidden>
+            Enter the text
+          </option>
           {makes.map((make, index) => (
             <option key={index} value={make}>
               {make}
@@ -75,7 +86,7 @@ export default function FilterCars({ onFilter }) {
         </Select>
       </FilterBlock>
       <FilterBlock>
-        <label htmlFor="price">Price/ 1 hour</label>
+        <Label htmlFor="price">Price/ 1 hour</Label>
         <Select
           id="price"
           onChange={(e) => setSelectedPrice(Number(e.target.value))}
@@ -89,32 +100,32 @@ export default function FilterCars({ onFilter }) {
         </Select>
       </FilterBlock>
       <FilterBlockMil>
-        <label>Сar mileage / km</label>
-        <div>
-        <Input
-          type="number"
-          min="0"
-          value={selectedMileage.min}
-          placeholder="From"
-          onChange={(e) =>
-            setSelectedMileage({
-              ...selectedMileage,
-              min: Number(e.target.value),
-            })
-          }
-        />
-        <Input
-          type="number"
-          min="0"
-          value={selectedMileage.max}
-          onChange={(e) =>
-            setSelectedMileage({
-              ...selectedMileage,
-              max: Number(e.target.value),
-            })
-          }
-        />
-       </div>
+        <Label>Сar mileage / km</Label>
+        <InputMil>
+          <Input
+            type="number"
+            min="0"
+            value={selectedMileage.min}
+            placeholder="From"
+            onChange={(e) =>
+              setSelectedMileage({
+                ...selectedMileage,
+                min: Number(e.target.value),
+              })
+            }
+          />
+          <Input
+            type="number"
+            min="0"
+            value={selectedMileage.max}
+            onChange={(e) =>
+              setSelectedMileage({
+                ...selectedMileage,
+                max: Number(e.target.value),
+              })
+            }
+          />
+        </InputMil>
       </FilterBlockMil>
       <Button onClick={handleFilter}>Search</Button>
       <Button onClick={resetFilter}>Reset</Button>

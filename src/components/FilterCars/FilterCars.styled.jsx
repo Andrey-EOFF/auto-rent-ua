@@ -3,12 +3,12 @@ import { colors } from "../../vars";
 
 export const FilterContainer = styled.div`
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   align-items: flex-end;
   justify-content: center;
-  margin: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  width: 1184px;
+  margin-bottom: 50px;
 `;
 
 export const FilterBlock = styled.div`
@@ -16,6 +16,19 @@ export const FilterBlock = styled.div`
   flex-direction: column;
   margin-right: 18px;
 `;
+export const Label = styled.label`
+  color: #8a8a89;
+  font-size: 14px;
+  line-height: 1.2;
+`;
+
+export const Option = styled.option`
+  background-color: #ffff;
+  padding: 14px auto 14px 18px;
+  border-radius: 14px;
+  border: 1px solid red;
+`;
+
 export const FilterBlockMil = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,16 +36,29 @@ export const FilterBlockMil = styled.div`
 
 export const Select = styled.select`
   display: flex;
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 16px;
+  padding: 14px 18px;
+  background-color: #f7f7fb;
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.1;
+  border-radius: 14px;
+  border: none;
+`;
+
+
+export const InputMil = styled.div`
+  display: flex;
 `;
 
 export const Input = styled.input`
-  padding: 10px;
-  margin-top: 10px;
-  font-size: 16px;
+  width: 160px;
+  padding: 14px 18px;
+  background-color: #f7f7fb;
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 1.1;
+  border-radius: 14px;
+  border: none;
 `;
 
 export const Button = styled.button`
