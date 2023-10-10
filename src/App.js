@@ -1,11 +1,10 @@
 import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import CatalogPage from "./pages/CatalogPage/CatalogPage";
 import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 import SideBar from "./components/SideBar/SideBar";
 import SharedLayout from "./components/SharedLayout/SharedLayout";
-
 
 export default function App() {
   return (
@@ -19,7 +18,7 @@ export default function App() {
           <Route path="favorites" element={<FavoritesPage />} />
         </Route>
 
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </>
   );

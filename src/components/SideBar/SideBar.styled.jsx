@@ -8,7 +8,7 @@ export const SideBarNav = styled.nav`
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  width: 1184px;
+  max-width: 1184px;
   background-color: rgba(0, 0, 0, 0.1);
   padding-top: 10px;
   padding-bottom: 10px;
@@ -23,12 +23,24 @@ export const SideBarNav = styled.nav`
     width: 100%;
     height: 60px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
 
   a {
     text-decoration: none;
     color: ${colors.textColor};
     font-size: 24px;
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 470px;
+    flex-direction: column;
   }
 `;
 

@@ -18,6 +18,10 @@ export const ImageContainer = styled.div`
   align-items: center;
   margin: 20px 0;
   background: linear-gradient(to right, #e5e5e5, #ffffff);
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Image = styled.img`
@@ -51,6 +55,10 @@ export const TextTime = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`
