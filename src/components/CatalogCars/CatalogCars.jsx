@@ -1,6 +1,14 @@
-import React, { useEffect, useState } from "react";
-import CardCar from "../CardCar/CardCar";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  setCars,
+  setPage,
+  setNoMoreCars,
+  setIsLoading,
+  setFilters,
+} from "../../redux/catalog/catalogSlice";
 import getAllCars from "../../api/api";
+import CardCar from "../CardCar/CardCar";
 import BtnLoadMore from "../Buttons/BtnLoadMore/BtnLoadMore";
 import FilterCars from "../FilterCars/FilterCars";
 import {
@@ -13,16 +21,12 @@ import BtnUp from "../Buttons/BtnUp/BtnUp";
 import Loader from "../Loader/Loader";
 
 export default function CatalogCars() {
-  const [cars, setCars] = useState([]);
-  const [page, setPage] = useState(1);
+  const dispatch = useDispatch();
+
+  const { cars, page, noMoreCars, isLoading, filters } = useSelector(
+    (state) => state.catalog
+  );
   const carsPerPage = 8;
-  const [noMoreCars, setNoMoreCars] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
-  const [filters, setFilters] = useState({
-    make: "",
-    price: 0,
-    mileage: { min: 0, max: 100000 },
-  });
 
   useEffect(() => {
     const loadCars = async () => {
@@ -31,29 +35,29 @@ export default function CatalogCars() {
         const responseData = response || [];
 
         if (responseData.length > 0) {
-          setCars((prevCars) => [...prevCars, ...responseData]);
+          dispatch(setCars(responseData));
         } else {
-          setNoMoreCars(true);
+          dispatch(setNoMoreCars(true));
         }
       } catch (error) {
         console.error("Error:", error);
       } finally {
-        setIsLoading(false);
+        dispatch(setIsLoading(false));
       }
     };
 
     loadCars();
-  }, [page, filters]);
+  }, [page, filters, dispatch]);
 
   const handleLoadMore = () => {
-    setPage((prevPage) => prevPage + 1);
+    dispatch(setPage(page + 1));
   };
 
   const handleFilter = (newFilters) => {
-    setFilters(newFilters);
-    setCars([]);
-    setPage(1);
-    setNoMoreCars(false);
+    dispatch(setFilters(newFilters));
+    dispatch(setCars([]));
+    dispatch(setPage(1));
+    dispatch(setNoMoreCars(false));
   };
 
   // Фільтрація автомобілів за обраними фільтрами
