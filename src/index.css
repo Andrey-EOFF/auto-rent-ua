@@ -9,10 +9,10 @@ body {
   align-self:center;
 max-width: 1440px;
 min-width: 375px;
-padding: 50px 128px 150px 128px;
+
 margin-left: auto;
 margin-right: auto;
-
+/* padding: 50px 128px 150px 128px; */
 }
 
 ul {
