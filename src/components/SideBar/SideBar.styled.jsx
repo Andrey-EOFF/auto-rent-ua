@@ -39,7 +39,7 @@ export const SideBarNav = styled.nav`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    width: 470px;
+    width: 100%;
     flex-direction: column;
   }
 `;
