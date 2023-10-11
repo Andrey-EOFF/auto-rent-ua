@@ -1,18 +1,28 @@
 {
   "files": {
-    "main.css": "/auto-rent-ua/static/css/main.5cc907bb.css",
-    "main.js": "/auto-rent-ua/static/js/main.d1d5ef22.js",
+    "main.css": "/auto-rent-ua/static/css/main.dc8fad99.css",
+    "main.js": "/auto-rent-ua/static/js/main.89151588.js",
+    "static/js/222.408c8cb3.chunk.js": "/auto-rent-ua/static/js/222.408c8cb3.chunk.js",
+    "static/js/369.ef4e346b.chunk.js": "/auto-rent-ua/static/js/369.ef4e346b.chunk.js",
+    "static/js/495.96fac472.chunk.js": "/auto-rent-ua/static/js/495.96fac472.chunk.js",
     "static/js/787.dc462805.chunk.js": "/auto-rent-ua/static/js/787.dc462805.chunk.js",
+    "static/js/101.70a9c79e.chunk.js": "/auto-rent-ua/static/js/101.70a9c79e.chunk.js",
+    "static/js/872.85ba1ae5.chunk.js": "/auto-rent-ua/static/js/872.85ba1ae5.chunk.js",
     "static/media/car1.jpg": "/auto-rent-ua/static/media/car1.e7950ebcda7f26547c79.jpg",
     "static/media/car2.jpg": "/auto-rent-ua/static/media/car2.a9482645280949322f05.jpg",
     "static/media/car3.jpg": "/auto-rent-ua/static/media/car3.59033088099339c5221c.jpg",
     "index.html": "/auto-rent-ua/index.html",
-    "main.5cc907bb.css.map": "/auto-rent-ua/static/css/main.5cc907bb.css.map",
-    "main.d1d5ef22.js.map": "/auto-rent-ua/static/js/main.d1d5ef22.js.map",
-    "787.dc462805.chunk.js.map": "/auto-rent-ua/static/js/787.dc462805.chunk.js.map"
+    "main.dc8fad99.css.map": "/auto-rent-ua/static/css/main.dc8fad99.css.map",
+    "main.89151588.js.map": "/auto-rent-ua/static/js/main.89151588.js.map",
+    "222.408c8cb3.chunk.js.map": "/auto-rent-ua/static/js/222.408c8cb3.chunk.js.map",
+    "369.ef4e346b.chunk.js.map": "/auto-rent-ua/static/js/369.ef4e346b.chunk.js.map",
+    "495.96fac472.chunk.js.map": "/auto-rent-ua/static/js/495.96fac472.chunk.js.map",
+    "787.dc462805.chunk.js.map": "/auto-rent-ua/static/js/787.dc462805.chunk.js.map",
+    "101.70a9c79e.chunk.js.map": "/auto-rent-ua/static/js/101.70a9c79e.chunk.js.map",
+    "872.85ba1ae5.chunk.js.map": "/auto-rent-ua/static/js/872.85ba1ae5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cc907bb.css",
-    "static/js/main.d1d5ef22.js"
+    "static/css/main.dc8fad99.css",
+    "static/js/main.89151588.js"
   ]
 }
