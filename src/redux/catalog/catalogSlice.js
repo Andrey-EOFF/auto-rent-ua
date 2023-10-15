@@ -34,4 +34,3 @@ export const catalogSlice = createSlice({
 
 export const { setCars, setPage, setNoMoreCars, setIsLoading, setFilters } =
   catalogSlice.actions;
-
