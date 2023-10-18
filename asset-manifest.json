@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/auto-rent-ua/static/css/main.715510fe.css",
-    "main.js": "/auto-rent-ua/static/js/main.89151588.js",
-    "static/js/222.408c8cb3.chunk.js": "/auto-rent-ua/static/js/222.408c8cb3.chunk.js",
-    "static/js/369.ef4e346b.chunk.js": "/auto-rent-ua/static/js/369.ef4e346b.chunk.js",
+    "main.css": "/auto-rent-ua/static/css/main.c432e876.css",
+    "main.js": "/auto-rent-ua/static/js/main.3aa92650.js",
+    "static/js/222.b7a753fa.chunk.js": "/auto-rent-ua/static/js/222.b7a753fa.chunk.js",
+    "static/js/369.62669867.chunk.js": "/auto-rent-ua/static/js/369.62669867.chunk.js",
     "static/js/495.96fac472.chunk.js": "/auto-rent-ua/static/js/495.96fac472.chunk.js",
     "static/js/787.dc462805.chunk.js": "/auto-rent-ua/static/js/787.dc462805.chunk.js",
-    "static/js/101.70a9c79e.chunk.js": "/auto-rent-ua/static/js/101.70a9c79e.chunk.js",
-    "static/js/872.85ba1ae5.chunk.js": "/auto-rent-ua/static/js/872.85ba1ae5.chunk.js",
+    "static/js/101.9a3a27f1.chunk.js": "/auto-rent-ua/static/js/101.9a3a27f1.chunk.js",
+    "static/js/243.159edcf4.chunk.js": "/auto-rent-ua/static/js/243.159edcf4.chunk.js",
     "static/media/car1.jpg": "/auto-rent-ua/static/media/car1.e7950ebcda7f26547c79.jpg",
     "static/media/car2.jpg": "/auto-rent-ua/static/media/car2.a9482645280949322f05.jpg",
     "static/media/car3.jpg": "/auto-rent-ua/static/media/car3.59033088099339c5221c.jpg",
     "index.html": "/auto-rent-ua/index.html",
-    "main.715510fe.css.map": "/auto-rent-ua/static/css/main.715510fe.css.map",
-    "main.89151588.js.map": "/auto-rent-ua/static/js/main.89151588.js.map",
-    "222.408c8cb3.chunk.js.map": "/auto-rent-ua/static/js/222.408c8cb3.chunk.js.map",
-    "369.ef4e346b.chunk.js.map": "/auto-rent-ua/static/js/369.ef4e346b.chunk.js.map",
+    "main.c432e876.css.map": "/auto-rent-ua/static/css/main.c432e876.css.map",
+    "main.3aa92650.js.map": "/auto-rent-ua/static/js/main.3aa92650.js.map",
+    "222.b7a753fa.chunk.js.map": "/auto-rent-ua/static/js/222.b7a753fa.chunk.js.map",
+    "369.62669867.chunk.js.map": "/auto-rent-ua/static/js/369.62669867.chunk.js.map",
     "495.96fac472.chunk.js.map": "/auto-rent-ua/static/js/495.96fac472.chunk.js.map",
     "787.dc462805.chunk.js.map": "/auto-rent-ua/static/js/787.dc462805.chunk.js.map",
-    "101.70a9c79e.chunk.js.map": "/auto-rent-ua/static/js/101.70a9c79e.chunk.js.map",
-    "872.85ba1ae5.chunk.js.map": "/auto-rent-ua/static/js/872.85ba1ae5.chunk.js.map"
+    "101.9a3a27f1.chunk.js.map": "/auto-rent-ua/static/js/101.9a3a27f1.chunk.js.map",
+    "243.159edcf4.chunk.js.map": "/auto-rent-ua/static/js/243.159edcf4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.715510fe.css",
-    "static/js/main.89151588.js"
+    "static/css/main.c432e876.css",
+    "static/js/main.3aa92650.js"
   ]
 }
