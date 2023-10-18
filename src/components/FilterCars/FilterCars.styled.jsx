@@ -7,14 +7,25 @@ export const FilterContainer = styled.div`
   margin-right: auto;
   align-items: flex-end;
   justify-content: center;
-  width: 1184px;
+  max-width: 1184px;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 0 25px;
+  }
 `;
 
 export const FilterBlock = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 18px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 `;
 export const Label = styled.label`
   color: #8a8a89;
@@ -43,6 +54,10 @@ export const Select = styled.select`
   line-height: 1.1;
   border-radius: 14px;
   border: none;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 
@@ -59,6 +74,10 @@ export const Input = styled.input`
   line-height: 1.1;
   border-radius: 14px;
   border: none;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Button = styled.button`
@@ -76,5 +95,10 @@ export const Button = styled.button`
   &:hover {
     background-color: ${colors.primaryHover};
     transition: background-color 0.3s ease-in-out;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
   }
 `;

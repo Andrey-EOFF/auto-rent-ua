@@ -12,14 +12,43 @@ export default function App() {
     <>
       <SideBar />
       <Routes>
-        <Route exact path="/" element={<Suspense fallback={<div>Loading...</div>}><HomePage /></Suspense>} />
+        <Route
+          exact
+          path="/"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomePage />
+            </Suspense>
+          }
+        />
 
         <Route path="/" element={<SharedLayout />}>
-          <Route path="catalog" element={<Suspense fallback={<div>Loading...</div>}><CatalogPage /></Suspense>} />
-          <Route path="favorites" element={<Suspense fallback={<div>Loading...</div>}><FavoritesPage /></Suspense>} />
+          <Route
+            path="catalog"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <CatalogPage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="favorites"
+            element={
+              <Suspense fallback={<div>Loading...</div>}>
+                <FavoritesPage />
+              </Suspense>
+            }
+          />
         </Route>
 
-        <Route path="*" element={<Suspense fallback={<div>Loading...</div>}><HomePage /></Suspense>} />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<div>Loading...</div>}>
+              <HomePage />
+            </Suspense>
+          }
+        />
       </Routes>
     </>
   );

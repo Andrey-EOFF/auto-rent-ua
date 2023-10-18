@@ -4,6 +4,7 @@ import {
   Header,
   Image,
   ImageContainer,
+  Section,
   StyledNavLink,
   Text,
   TextContainer,
@@ -15,7 +16,8 @@ import image3 from "../../images/car3.jpg";
 
 export default function Home() {
   return (
-    <Container>
+    <Section>
+       <Container>
       <Header>Аренда авто в Україні</Header>
       <ImageContainer>
         <Image src={image1} alt="Авто 1" />
@@ -51,5 +53,6 @@ export default function Home() {
         <StyledNavLink to="/catalog">Catalog</StyledNavLink>
       </TextTime>
     </Container>
+   </Section>
   );
 }

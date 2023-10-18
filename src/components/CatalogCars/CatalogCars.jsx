@@ -16,6 +16,7 @@ import {
   CarList,
   CardContainer,
   NoMoreCarsText,
+  Section,
 } from "./CatalogCars.styled";
 import BtnUp from "../Buttons/BtnUp/BtnUp";
 import Loader from "../Loader/Loader";
@@ -72,26 +73,28 @@ export default function CatalogCars() {
 
   return (
     <>
-      <FilterCars onFilter={handleFilter} />
-      {isLoading ? (
-        <Loader />
-      ) : (
-        <CardContainer>
-          <CarList>
-            {filteredCars.map((car) => (
-              <CarItem key={car.id}>
-                <CardCar car={car} />
-              </CarItem>
-            ))}
-          </CarList>
-          {!noMoreCars ? (
-            <BtnLoadMore onLoadMore={handleLoadMore} />
-          ) : (
-            <NoMoreCarsText>Ви передивились всі авто!</NoMoreCarsText>
-          )}
-          <BtnUp />
-        </CardContainer>
-      )}
+      <Section>
+        <FilterCars onFilter={handleFilter} />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <CardContainer>
+            <CarList>
+              {filteredCars.map((car) => (
+                <CarItem key={car.id}>
+                  <CardCar car={car} />
+                </CarItem>
+              ))}
+            </CarList>
+            {!noMoreCars ? (
+              <BtnLoadMore onLoadMore={handleLoadMore} />
+            ) : (
+              <NoMoreCarsText>Ви передивились всі авто!</NoMoreCarsText>
+            )}
+            <BtnUp />
+          </CardContainer>
+        )}
+      </Section>
     </>
   );
 }

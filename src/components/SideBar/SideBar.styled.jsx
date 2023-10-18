@@ -2,6 +2,16 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { colors } from "../../vars";
 
+
+export const Section = styled.section`
+    min-width: 1184px;
+    width: 100%;
+   
+    margin-left: auto;
+    margin-right: auto;
+`;
+
+
 export const SideBarNav = styled.nav`
   display: flex;
   margin-bottom: 30px;
